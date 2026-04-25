@@ -1,0 +1,16 @@
+# Dependencias — se instalan solas en el servidor
+node_modules/
+*/node_modules/
+
+# Base de datos local — en producción se crea sola
+backend/vamos.db
+
+# Variables de entorno — contienen contraseñas, no se suben
+backend/.env
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Build del frontend — se genera en el servidor
+frontend/dist/
