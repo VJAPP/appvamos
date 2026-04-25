@@ -17,7 +17,7 @@ passport.use(new GoogleStrategy(
   {
     clientID:     process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL:  'http://localhost:3000/api/auth/google/callback',
+    callbackURL: 'https://vamos-backend-ggqq.onrender.com/api/auth/google/callback',
   },
   // Esta función se ejecuta cuando Google nos devuelve los datos del usuario
   (accessToken, refreshToken, profile, done) => {
@@ -58,7 +58,7 @@ passport.use(new FacebookStrategy(
   {
     clientID:     process.env.FACEBOOK_APP_ID,
     clientSecret: process.env.FACEBOOK_APP_SECRET,
-    callbackURL:  'http://localhost:3000/api/auth/facebook/callback',
+    callbackURL: 'https://vamos-backend-ggqq.onrender.com/api/auth/facebook/callback',
     profileFields: ['id', 'displayName', 'emails', 'photos'],
   },
   (accessToken, refreshToken, profile, done) => {
