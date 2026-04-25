@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000';
+const API_URL = 'https://vamos-backend-ggqq.onrender.com';
 
 // ---- USUARIOS ----
 export async function registerUser({ name, email, password }) {
