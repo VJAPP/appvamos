@@ -42,9 +42,9 @@ export default function Auth({
           <div style={{ marginBottom: '20px' }}>
             {[
               { label: 'Continuar con Google', color: '#EA4335', letter: 'G',
-                href: 'http://localhost:3000/api/auth/google', bg: 'white', textColor: colors.text },
+                href: 'https://vamos-backend-ggqq.onrender.com/api/auth/google', bg: 'white', textColor: colors.text },
               { label: 'Continuar con Facebook', color: '#1877F2', letter: 'f',
-                href: 'http://localhost:3000/api/auth/facebook', bg: '#1877F2', textColor: 'white' },
+                href: 'https://vamos-backend-ggqq.onrender.com/api/auth/facebook', bg: '#1877F2', textColor: 'white' },
             ].map((s) => (
               <a key={s.label} href={s.href} style={{
                 display: 'flex', alignItems: 'center', justifyContent: 'center',

@@ -128,8 +128,8 @@ export default function Landing({ onNavigate }) {
             </p>
             <div style={{ display: 'flex', gap: '8px' }}>
               {[
-                { label: 'Google', color: '#EA4335', letter: 'G', href: 'http://localhost:3000/api/auth/google' },
-                { label: 'Facebook', color: '#1877F2', letter: 'f', href: 'http://localhost:3000/api/auth/facebook' },
+                { label: 'Google', color: '#EA4335', letter: 'G', href: 'https://vamos-backend-ggqq.onrender.com/api/auth/google' },
+                { label: 'Facebook', color: '#1877F2', letter: 'f', href: 'https://vamos-backend-ggqq.onrender.com/api/auth/facebook' },
               ].map((s) => (
                 <a key={s.label} href={s.href} style={{
                   padding: '8px 16px', border: `1.5px solid ${colors.border}`,
