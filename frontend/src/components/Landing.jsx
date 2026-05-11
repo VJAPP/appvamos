@@ -1,4 +1,5 @@
 import { colors, shadows } from '../theme';
+const LOGO = 'https://res.cloudinary.com/dl5og2uxd/image/upload/v1778507470/logo.png_foiemx.jpg';
 export default function Landing({ onNavigate }) {
   return (
     <div style={{
@@ -32,9 +33,7 @@ export default function Landing({ onNavigate }) {
         padding:        '20px 32px',
         borderBottom:   `1px solid ${colors.border}`,
       }}>
-     <div style={{ fontFamily: "'Fraunces', serif", fontSize: '24px', fontWeight: '700', color: colors.text }}>
-  Vamos<span style={{ color: colors.cyan }}>.</span>
-</div>
+     <img src={LOGO} alt="VAMOS" style={{ height: '38px', width: 'auto', borderRadius: '8px' }} />
         <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
           <button onClick={() => onNavigate('login')} style={{
             padding: '8px 18px', border: `1.5px solid ${colors.border}`,

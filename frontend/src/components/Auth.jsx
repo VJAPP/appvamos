@@ -1,4 +1,5 @@
 import { styles, colors, shadows } from '../theme';
+const LOGO = 'https://res.cloudinary.com/dl5og2uxd/image/upload/v1778507470/logo.png_foiemx.jpg';
 
 export default function Auth({
   mode, name, email, password,
@@ -18,9 +19,7 @@ export default function Auth({
 
         {/* Logo */}
        <div style={{ textAlign: 'center', marginBottom: '28px' }}>
-  <div style={{ fontFamily: "'Fraunces', serif", fontSize: '32px', fontWeight: '700', color: colors.text, marginBottom: '4px' }}>
-    Vamos<span style={{ color: colors.cyan }}>.</span>
-  </div>
+  <img src={LOGO} alt="VAMOS" style={{ height: '52px', width: 'auto', borderRadius: '12px', marginBottom: '8px' }} />
   <p style={{ fontSize: '14px', color: colors.text3, margin: 0 }}>
     {isLogin ? 'Bienvenido de vuelta' : 'Creá tu cuenta gratis'}
   </p>

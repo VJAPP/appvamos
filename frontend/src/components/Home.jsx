@@ -1,4 +1,5 @@
 import { useState } from 'react';
+const LOGO = 'https://res.cloudinary.com/dl5og2uxd/image/upload/v1778507470/logo.png_foiemx.jpg';
 import { colors, shadows } from '../theme';
 
 export default function Home({ user, onNavigate, onLogout }) {
@@ -24,9 +25,7 @@ export default function Home({ user, onNavigate, onLogout }) {
         display: 'flex', alignItems: 'center',
         justifyContent: 'space-between', marginBottom: '16px',
       }}>
-        <div style={{ fontFamily: "'Fraunces', serif", fontSize: '20px', fontWeight: '700', color: colors.text }}>
-  Vamos<span style={{ color: colors.cyan }}>.</span>
-</div>
+       <img src={LOGO} alt="VAMOS" style={{ height: '30px', width: 'auto', borderRadius: '6px' }} />
         <button onClick={() => onNavigate('profile')} style={{
           width: '38px', height: '38px', borderRadius: '50%',
           background: colors.cyanBg, border: `2px solid ${colors.cyan}`,
