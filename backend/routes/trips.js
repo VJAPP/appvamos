@@ -27,6 +27,17 @@ router.post('/', async (req, res) => {
   if (!creator_name || !origin || !destination || !date || !collaboration) {
     return res.status(400).json({ error: 'Faltan campos obligatorios.' });
   }
+  // Anti-spam: máximo 5 publicaciones por usuario por día
+  if (creator_email) {
+    const hoy = new Date().toISOString().slice(0, 10); // Formato: 2026-05-01
+    const publicaciones = await db.all(
+      `SELECT id FROM trips WHERE creator_email = ? AND date_created >= ?`,
+      [creator_email, hoy]
+    );
+    if (publicaciones.length >= 5) {
+      return res.status(429).json({ error: 'Llegaste al límite de 5 publicaciones por día. Intentá mañana.' });
+    }
+  }
   try {
     const result = await db.run(
       `INSERT INTO trips (creator_name, creator_email, creator_photo, type, origin, destination, date, collaboration, description, contact_method, contact_info) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,

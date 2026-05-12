@@ -87,9 +87,10 @@ async function initDB() {
       date           TEXT NOT NULL,
       collaboration  TEXT NOT NULL,
       description    TEXT DEFAULT '',
-      contact_method TEXT DEFAULT 'whatsapp',
-      contact_info   TEXT DEFAULT ''
-    )
+     contact_method TEXT DEFAULT 'whatsapp',
+    contact_info   TEXT DEFAULT '',
+    date_created   TEXT DEFAULT to_char(NOW(), 'YYYY-MM-DD')
+  )
   `);
   console.log('✅ Tabla trips lista.');
 
