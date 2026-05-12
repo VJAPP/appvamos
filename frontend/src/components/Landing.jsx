@@ -31,7 +31,18 @@ export default function Landing({ onNavigate }) {
       }}>
         <img src={LOGO} alt="VAMOS" style={{ height: '38px', width: 'auto', borderRadius: '8px' }} />
         <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-          <button onClick={() => onNavigate('login')} style={{
+  <button
+    onClick={() => document.getElementById('como-funciona').scrollIntoView({ behavior: 'smooth' })}
+    style={{
+      padding: '8px 18px', border: 'none',
+      background: 'transparent', color: colors.text2,
+      fontSize: '13px', fontWeight: '500', cursor: 'pointer',
+      fontFamily: "'Plus Jakarta Sans', sans-serif",
+    }}
+  >
+    ¿Cómo funciona?
+  </button>
+  <button onClick={() => onNavigate('login')} style={{
             padding: '8px 18px', border: `1.5px solid ${colors.border}`,
             borderRadius: '8px', background: 'transparent',
             color: colors.text, fontSize: '13px', fontWeight: '500',
@@ -195,7 +206,7 @@ export default function Landing({ onNavigate }) {
       </div>
 
       {/* ── SECCIÓN: CÓMO FUNCIONA ── */}
-      <div style={{
+      <div id="como-funciona" style={{
         position: 'relative', zIndex: 1,
         background: colors.bg,
         borderTop: `1px solid ${colors.border}`,
