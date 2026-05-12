@@ -10,6 +10,7 @@ import PublishRequest  from './components/PublishRequest';
 import PublishProduct  from './components/PublishProduct';
 import ProductList     from './components/ProductList';
 import MyPublications from './components/MyPublications';
+import NotFound from './components/NotFound';
 import {
   loginUser, registerUser,
   getTrips, createTrip, deleteTrip,
@@ -254,4 +255,5 @@ export default function App() {
     onDelete={handleDeleteProductConn} onBack={() => setView('home')} />;
   if (view === 'my_publications') return <MyPublications user={user} onBack={() => setView('home')} />; 
   if (view === 'login-error') return <div style={{ textAlign: 'center', padding: '40px', color: '#ef4444' }}><h2>Error al iniciar sesion</h2><button onClick={() => setView('login')} style={{ marginTop: '16px', cursor: 'pointer' }}>Volver al login</button></div>;
+if (view === 'not-found') return <NotFound onNavigate={setView} />;
 }
